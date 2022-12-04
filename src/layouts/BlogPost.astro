@@ -2,7 +2,6 @@
 import "../styles/post.css"
 
 import BaseHead from "../components/BaseHead.astro";
-import Navigation from "../components/Navigation.astro";
 import Particles from "../components/Particles.astro";
 
 export interface Props {
@@ -53,7 +52,6 @@ const {
   </head>
 
   <body>
-    <Navigation />
     <main class="body-box">
       <article>
         {heroImage && <img width="80%" height={360} src={heroImage} alt="" />}
