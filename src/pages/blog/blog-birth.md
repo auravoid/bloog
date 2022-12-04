@@ -1,8 +1,9 @@
 ---
 layout: '../../layouts/BlogPost.astro'
 title: 'Creation of blog.'
-description: 'AOWO'
+description: 'A quick reason as to why I made this.'
 pubDate: 'Dec 12 2022'
+heroImage: 'https://cdn.auravoid.dev/byte.png'
 ---
 
 # I decided I needed a blog
