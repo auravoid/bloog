@@ -1,0 +1,74 @@
+---
+import "../styles/post.css"
+
+import BaseHead from "../components/BaseHead.astro";
+import Navigation from "../components/Navigation.astro";
+import Particles from "../components/Particles.astro";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
+}
+
+const {
+  content: { title, description, pubDate, updatedDate, heroImage },
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <Particles />
+    <BaseHead
+      title={title}
+      description={description}
+      page="main"
+    />
+    <style>
+      .title {
+        font-size: 2em;
+        margin: 0.25em 0 0;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        margin: auto;
+        display: block;
+
+        border-radius: 0.5rem;
+      }
+
+      .date {
+        font-size: 0.8em;
+        margin: 0.25em 0 0;
+        text-align: center;
+        display:block;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <Navigation />
+    <main class="body-box">
+      <article>
+        {heroImage && <img width="80%" height={360} src={heroImage} alt="" />}
+        <h1 class="title">{title}</h1>
+        {pubDate && <time class="date">{pubDate}</time>}
+        {
+          updatedDate && (
+            <div>
+              Last updated on <time>{updatedDate}</time>
+            </div>
+          )
+        }
+        <hr />
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
