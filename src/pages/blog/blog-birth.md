@@ -2,7 +2,7 @@
 layout: '../../layouts/BlogPost.astro'
 title: 'Creation of blog.'
 description: 'A quick reason as to why I made this.'
-pubDate: 'Dec 12 2022'
+pubDate: 'Dec 02 2022'
 heroImage: 'https://cdn.auravoid.dev/byte.png'
 ---
 
